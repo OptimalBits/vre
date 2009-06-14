@@ -1,0 +1,58 @@
+
+True Type rendering TODO LIST:
+
+x Add support for polygon contours in the clipping function.
+x Add clipping to the vre_text primitive.
+- Add bounding box generation for the vre_text primitive.
+~ Analyze memory consumption.
+
+- Perform refactoring and integrate truetype within vre framework
+  (adding clipping, transforming support, and tile based rendering).
+
+x Implement bezier flattening for curves.
+x Add a transformation matrix to glyph_to_poly function. (font scaling,
+  ( shear (cursive), and rotations).
+x Fix for contours that do not have start and end on curve points.
+
+x Implement composite glyphs.
+- implement when ARGS_ARE_XY_VALUES is not set (they are points).
+
+x Implement antialiasing in rendering function.
+
+~ Implement font metrics.
+~ Implement kerning.
+
+x Implement cmaps.
+x implement cmap format 0
+x implement cmap format 4 (unicode)
+- implement cmap format 6 (unicode)
+- implement cmap format 12 (newest unicode)
+
+- implement CRC checksum for .ttf files.
+
+x Improve point accuracy to 16.16 bits.
+x Improve visual quality of the polygon renderer.
+x Implement antialiasing in polygon renderer.
+- Optimize polygon renderer.
+
+x Implement destructors and check for easy-fixed memory leaks.
+
+x Implement a drawText function.
+
+x Implement a font wrapper module for fonts.
+
+x Implement a cache mechanism for glyphs.
+
+- Write extensive tests for the true type functionality.
+- Implement tests with a lot of different TTF formats.
+
+- Document code using doxygen semantics.
+
+
+
+- remove all 64 bits multiplications and data types.
+- optimize mem copy and mem set functions.
+
+BUGS:
+
+- fixed. exclamation symbol appears twice in positions 2 and 3.
